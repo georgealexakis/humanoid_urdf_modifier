@@ -28,15 +28,15 @@ Humanoid:
 
 * Main GUI
 
-<img src="/screenshots/main_gui.png" width="32%" title="Main GUI" />
+<img src="/screenshots/main_gui.png" title="Main GUI" />
 
 * Physics Engine GUI
 
-<img src="/screenshots/physics_engine.png" width="32%" title="Physics Engine" />
+<img src="/screenshots/physics_engine.png" title="Physics Engine" />
 
 ## Contributing
 
-Please send your changes or any improvement, bug or whatever.
+Please send me your changes or any improvement, bug or whatever.
 
 ## License
 
