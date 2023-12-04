@@ -190,22 +190,16 @@ class HumanoidModifier:
         scr_y.config(command=canvas_m.yview)
         scr_x.config(command=canvas_m.xview)
         self.mst = Frame(canvas_m)
-        self.mst.bind(
-            '<Configure>',
-            lambda e: canvas_m.configure(
-                scrollregion=canvas_m.bbox('all')
-            )
-        )
-        fc = canvas_m.create_window((0, 0), window=self.mst, anchor="nw")
+        fc = canvas_m.create_window((0, 0), window=self.mst, anchor='nw')
         canvas_m.configure(yscrollcommand=scr_y.set)
         canvas_m.configure(xscrollcommand=scr_x.set)
-        # Center canvas
 
         def on_canvas_resize(event):
             x = (event.width - self.mst.winfo_width()) / 2
             canvas_m.coords(fc, (x, 0))
-            bbox = (0, 0, event.width, self.mst.winfo_height())
+            bbox = (0, 0, self.mst.winfo_width(), self.mst.winfo_height())
             canvas_m.config(scrollregion=bbox)
+
         canvas_m.bind('<Configure>', on_canvas_resize)
         canvas_m.grid(row=0, column=0, sticky=NSEW)
         # X and Y scrollbars of overflow
